@@ -19,12 +19,12 @@
 // nameOfCity('New York') ➞ 'New York'
 // nameOfCity('newark') ➞ 'newark'
 // nameOfCity('London') ➞ 'The city name does not begin with Los or New'
-console.log('------QUESTION 1------');
+console.log("------QUESTION 1------");
 
 function nameOfCity(str) {
   if (
     str.length >= 3 &&
-    (str.substring(0, 3) == "Los" || str.substring(0, 3) == "New")
+    (str.toLowerCase().substring(0, 3) == "los" ||  str.toLowerCase().substring(0, 3) == "new")
   ) {
     return str;
   }
@@ -32,12 +32,11 @@ function nameOfCity(str) {
   return "The city name does not begin with Los or New";
 }
 
-
 console.log(nameOfCity("New York")); // New York
 console.log(nameOfCity("newark")); //
 console.log(nameOfCity("London")); // "_The city name does not begin with Los or New_"
 
-console.log('------QUESTION 2------');
+console.log("------QUESTION 2------");
 
 // #### 2. isDivisible?
 // Create a function named "// powerOf(3) ➞ 27
@@ -56,23 +55,19 @@ console.log(isDivisible(100)); // true
 // isDivisible(1000) ➞ true
 // isDivisible(100) ➞ true
 
-console.log('------QUESTION 3 NOT THERE (MISSING)------');
+console.log("------QUESTION 3 NOT THERE (MISSING)------");
 
-
-console.log('------QUESTION 4------');
+console.log("------QUESTION 4------");
 // #### 4. What's the weathe// powerOf(3) ➞ 27
 // powerOf(4) ➞ 256* to complete this task. Create a function named "_isRaining_". If passed `true`, return "_wet day - you need an umbrella_". If passed `false`, return "_dry day - leave your umbrella at home_".
-let isRaining = (rain) =>
-  rain === true || rain !== false
-    ? console.log("wet day - you need an umbrella")
-    : console.log("dry day - leave your umbrella at home");
+let isRaining = (rain) =>rain  ?  "wet day - you need an umbrella!" :  "dry day - leave your umbrella at home!";
 isRaining(true); // wet day - you need an umbrella
 
 // ##### Example
 
-// isRaining(true) ➞ 'wet day - you need an umbrella'
+// isRaining(true) ➞ 'wet day - you need an umbrella'/d5bd1559f014bf63df7324deee6416ee/1
 
-console.log('------QUESTION 1 LOOP------');
+console.log("------QUESTION 1 LOOP------");
 // ### Loops
 
 // #### 1. Sequence
@@ -89,7 +84,7 @@ geometricalSequence();
 // ##### Example
 
 // geometricalSequence() ➞ '1 2 4 8 16 32 64 128 256'
-console.log('------QUESTION 2 LOOP------');
+console.log("------QUESTION 2 LOOP------");
 
 // #### 2. Multiples
 // Create a function named "_multiplesOfThree_" and **use a loop** to return the first five multiples of three: _`3 6 9 12 15`_. Concatenate each value to a string and return a string.
@@ -100,21 +95,21 @@ console.log('------QUESTION 2 LOOP------');
 let value = [1, 2, 3, 4, 5];
 function multiplesOfThree() {
   for (let i = 0; i < value.length; i++) {
-    console.log(`${value[i] ** 3}`);
+    console.log(`${value[i] * 3}`);
   }
   return value;
 }
 multiplesOfThree();
 
 // ### Math
-console.log('------QUESTION 1 MATH------');
+console.log("------QUESTION 1 MATH------");
 // #### 1. You've got the power
 // Create a function named "_powerOf_" which takes an integer as an argument and returns the integer to the power of itself. You should **use a Math object method** to make the calculation.
 
 // ##### Examples
 
 // powerOf(3) ➞ 27
-// powerOf(4) ➞ 256
+// powerOf(4) ➞ 256-
 
 const powerOf = function (x) {
   console.log(x ** x);
@@ -122,7 +117,7 @@ const powerOf = function (x) {
 powerOf(3); // 27
 powerOf(4); // 256
 
-console.log('------QUESTION 1 PROBLEM SOLVING------');
+console.log("------QUESTION 1 PROBLEM SOLVING------");
 // ### Problem Solving
 
 // #### 1. How many?
@@ -133,6 +128,7 @@ console.log('------QUESTION 1 PROBLEM SOLVING------');
 // vowelCount("hello") ➞ 2
 // vowelCount("test") ➞ 1
 // vowelCount("fbw") ➞ 0
+
 let vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
 function vowelCount(str) {
   let count = 0;
@@ -147,5 +143,7 @@ function vowelCount(str) {
 vowelCount("hello");
 vowelCount("test");
 vowelCount("fbw");
+
+
 // DO NOT EDIT below this line - This will result in an automatic fail
-// module.exports = {nameOfCity, isDivisible, missingAngle, isRaining, geometricalSequence, multiplesOfThree, powerOf, vowelCount};
+ module.exports = {nameOfCity, isDivisible,  isRaining, geometricalSequence, multiplesOfThree, powerOf, vowelCount};
